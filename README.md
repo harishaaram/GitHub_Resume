@@ -1,5 +1,6 @@
 # GitHub_Resume
-Innovating the Technical Recruitment process by providing what kind of Learner you're through data from GITHUB!
+Innovating the Technical Recruitment(Mostly for CS candidates) process 
+by providing what kind of Learner you're through data from GITHUB profile!
 
 
 ## TYPES OF LEARNERS:
