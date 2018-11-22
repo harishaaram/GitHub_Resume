@@ -1,12 +1,9 @@
-# GitHub_Resume
-Innovating the Technical Recruitment(Mostly for CS candidates) process 
-by providing what kind of Learner you're through data from GITHUB profile!
+# ResumeTracker
 
+Identifying your **customer audience** based on the *usage metric* of your *product*.
 
-## TYPES OF LEARNERS:
-  1. Logarithmic - slow learner
-  2. Linear - medicore(typical candidate)
-  3. LogLinear - High Learner
-  4. Quadratic - Entrepreneur(will adapt to the changing tech)
-  5. Cubic - Achiever
-  6. Exponential - Extradionary talent
+1. Customer audience - Recruiters/Hiring Managers
+2. usage metric - Click through probability
+3. product - resume pdf
+
+# A/B Testing: To statistically infer the correct target audience
