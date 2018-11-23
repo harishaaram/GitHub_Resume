@@ -30,8 +30,10 @@ class OriginalLink(db.Model):
     active = db.Column(db.Boolean())
     confirmed_at = db.Column(db.DateTime())
 
-@app.route('/')
+@app.route('/<website_link>')
 def redirect_clicks(website_link='https://harishaaram.github.io/'):
+    if website_link == 'pydata':
+        return redirect('https://www.meetup.com/PyDataChi/events/251222062/', code=302)
     return redirect(website_link,code=302)
 
 if __name__ == "__main__":
