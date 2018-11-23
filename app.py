@@ -1,19 +1,19 @@
-from secrets import DATABASE_CONNECTION_URI
+# from secrets import DATABASE_CONNECTION_URI
 from flask import Flask,redirect,url_for
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_CONNECTION_URI
-heroku = Heroku(app)
 app.debug = True
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 
 
 #Many to One: https://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-one
 
-
+#Create our DB Model
 class ClickLink(db.Model):
     link_id = db.Column(db.Integer,nullable=False)
     resume_link = db.Column(db.String(255), primary_key=True)
