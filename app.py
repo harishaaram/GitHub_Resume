@@ -1,6 +1,6 @@
 # from secrets import DATABASE_CONNECTION_URI
 from flask import Flask,redirect,url_for
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy
 from flask.ext.heroku import Heroku
 
 app = Flask(__name__)
