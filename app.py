@@ -7,7 +7,7 @@ from flask_heroku import Heroku
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_CONNECTION_URI
 app.debug = True
-# heroku = Heroku(app)
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 clicklink_to_weblink = {
