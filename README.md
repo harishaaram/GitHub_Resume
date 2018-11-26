@@ -6,7 +6,7 @@ Identifying your **customer audience** based on the *usage metric* of your *prod
 2. usage metric - Click through probability
 3. product - resume pdf
 
-## A/B Testing: To statistically infer the correct target audience
+## A/B Testing: To statistically infer the correct target audience based on your Clickstream data
 
 ## Database Structure:
     | app_name.heroku.com/
