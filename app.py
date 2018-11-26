@@ -1,13 +1,13 @@
 # from secrets import DATABASE_CONNECTION_URI
-from flask import Flask,redirect
+from flask import Flask,redirect, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
 
 
 app = Flask(__name__)
-# app.config['SQLALCHEMY_DATABASE_URI'] =
+# app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_CONNECTION_URI
 app.debug = True
-heroku = Heroku(app)
+# heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 clicklink_to_weblink = {
@@ -30,6 +30,7 @@ class ClickLink(db.Model):
     resume_link = db.Column(db.String(255), nullable=False)
     category_name = db.Column(db.String(255), nullable=False)
     timestamp = db.Column(db.DateTime,server_default=db.func.now())
+    user_agent = db.Column(db.String(255))
 
 
 
@@ -46,7 +47,7 @@ def redirect_clicks(website_link='https://harishaaram.github.io/'):
     """
     value_list = website_link.split('-')
     get_webpage= clicklink_to_weblink[value_list[1]]
-    row = ClickLink(resume_link = value_list[1], category_name = value_list[0])
+    row = ClickLink(resume_link = value_list[1], category_name = value_list[0], user_agent = request.headers.get('User-Agent'))
     db.session.add(row)
     db.session.commit()
     return redirect(get_webpage,code=302)
