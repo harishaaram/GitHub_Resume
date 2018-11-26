@@ -31,6 +31,8 @@ class ClickLink(db.Model):
     category_name = db.Column(db.String(255), nullable=False)
     timestamp = db.Column(db.DateTime,server_default=db.func.now())
     user_agent = db.Column(db.String(255))
+    platform = db.Column(db.String(255))
+    browser = db.Column(db.String(255))
 
 
 
@@ -46,8 +48,11 @@ def redirect_clicks(website_link='https://harishaaram.github.io/'):
 
     """
     value_list = website_link.split('-')
+
     get_webpage= clicklink_to_weblink[value_list[1]]
-    row = ClickLink(resume_link = value_list[1], category_name = value_list[0], user_agent = request.headers.get('User-Agent'))
+    row = ClickLink(resume_link = value_list[1], category_name = value_list[0],
+                    user_agent = request.headers.get('User-Agent'), platform =request.user_agent.platform,
+                    browser = request.user_agent.browser)
     db.session.add(row)
     db.session.commit()
     return redirect(get_webpage,code=302)
