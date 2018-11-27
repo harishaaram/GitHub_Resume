@@ -54,8 +54,8 @@ def redirect_clicks(website_link='https://harishaaram.github.io/'):
     user_agent = request.headers.get('User-Agent')
     get_webpage= clicklink_to_weblink[value_list[1]]
     row = ClickLink(resume_link = value_list[1], category_name = value_list[0],
-                    user_agent = user_agent, platform =user_agent.platform,
-                    browser = user_agent.browser)
+                    user_agent = user_agent, platform =request.user_agent.string,
+                    browser = request.remote_addr)
     db.session.add(row)
     db.session.commit()
     return redirect(get_webpage,code=302)
