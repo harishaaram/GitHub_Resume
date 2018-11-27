@@ -11,17 +11,18 @@ heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 clicklink_to_weblink = {
-    'pydata':'https://www.meetup.com/PyDataChi/events/251222062/',
+    'tptalk':'https://www.meetup.com/PyDataChi/events/251222062/',
     'paper': 'http://arxiv.org/abs/1805.07851',
     'newsoptimism' : 'https://medium.com/@hramachandran/impact-of-linguistic-choice-of-words-in-news-articles-105122d099a5',
     'foodfda' : 'http://nbviewer.jupyter.org/github/harishaaram/Talks/blob/master/PyDataChi/Project2/PyDataChi_Project2.ipynb',
     'chicagocrime': 'http://nbviewer.jupyter.org/github/ChesterHsieh/CS-584-ML-final-project/blob/master/hsieh%28A20384559%29_ramachandran%28A20377422%29_homework1.ipynb',
     'personalwebsite':'https://harishaaram.github.io/',
+    'btpersonalwebsite':'https://harishaaram.github.io/',
     'github':'https://github.com/harishaaram',
     'diagnozer':'https://www.linkedin.com/pulse/image-recognition-application-monitor-patient-harish-gandhi/',
     'thirukurral':'https://www.amazon.com/harish-Thirukurral/dp/B074CM552B/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1503190892&sr=1-1&keywords=Thirukurral',
     'mediumblog':'https://medium.com/@hramachandran',
-    'talks': 'https://www.meetup.com/PyDataChi/events/251222062/'
+    'bttalk': 'https://www.meetup.com/PyDataChi/events/251222062/',
 }
 
 #Many to One: https://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-one
