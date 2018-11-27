@@ -54,7 +54,7 @@ def redirect_clicks(website_link='https://harishaaram.github.io/'):
 
     get_webpage= clicklink_to_weblink[value_list[1]]
     row = ClickLink(resume_link = value_list[1], category_name = value_list[0],
-                    user_agent = "latency_test", platform ="latency_test",
+                    user_agent = request.headers.get('User-Agent'), platform ="latency_test",
                     browser = "latency_test")
     db.session.add(row)
     db.session.commit()
