@@ -21,7 +21,7 @@ clicklink_to_weblink = {
     'thirukurral':'https://www.amazon.com/harish-Thirukurral/dp/B074CM552B/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1503190892&sr=1-1&keywords=Thirukurral',
     'mediumblog':'https://medium.com/@hramachandran',
     'bttalk': 'https://www.meetup.com/PyDataChi/events/251222062/',
-    'gta':'http://nbviewer.jupyter.org/github/harishaaram/Global-Terrorism-Prediction/blob/master/Global_Terrorism.ipynb'
+    'gta':'https://github.com/harishaaram/Global-Terrorism-Prediction/blob/master/Global_Terrorism.ipynb'
 }
 
 #Many to One: https://docs.sqlalchemy.org/en/latest/orm/basic_relationships.html#one-to-one
