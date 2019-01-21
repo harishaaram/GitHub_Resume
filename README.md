@@ -55,11 +55,13 @@ Identifying your **customer audience** based on the **usage metric** of your **p
 
 
 ### How does my data look like:
-![](sample.png)
+![](images/sample.png)
 
 ### Which day of the week does my resume get attention?
-![](which_day_of_week.png)
+![](images/which_day_of_week.png)
 
+### Anamoly detection on my personal webpage: 23 Unique visitors on Jan 7th
+![](images/web_page_analytics.jpg)
 
 ### Reference Links:
 1. 
